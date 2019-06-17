@@ -472,7 +472,7 @@ Browser activities
 '''
 
 
-def ChromeBrowser(ignore_images=False, headless=False, chrome_options=False):
+def ChromeBrowser(ignore_images=False, headless=False, c_options=False):
     '''
 
     Opens the Chrome Browser in a Selenium instance.
@@ -499,8 +499,8 @@ def ChromeBrowser(ignore_images=False, headless=False, chrome_options=False):
 
     from selenium.webdriver import Chrome
     
-    if chrome_options:
-        pass
+    if c_options:
+        chrome_options = c_options
     else:
         from selenium.webdriver import ChromeOptions
         chrome_options = ChromeOptions()
