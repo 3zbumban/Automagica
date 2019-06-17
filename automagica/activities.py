@@ -472,7 +472,7 @@ Browser activities
 '''
 
 
-def ChromeBrowser(ignore_images=False, headless=False):
+def ChromeBrowser(ignore_images=False, headless=False, chrome_options=False):
     '''
 
     Opens the Chrome Browser in a Selenium instance.
@@ -480,6 +480,7 @@ def ChromeBrowser(ignore_images=False, headless=False):
     Args:
         ignore_images (bool): do not load images
         headless (bool): run without a window
+        chrome_optoins (): add custom Chrome Options (`from selenium.webdriver import Chrome, ChromeOptions`)
 
     Returns:
         webdriver: Selenium Webdriver
@@ -498,7 +499,10 @@ def ChromeBrowser(ignore_images=False, headless=False):
 
     from selenium.webdriver import Chrome, ChromeOptions
 
-    chrome_options = ChromeOptions()
+    if chrome_options:
+        pass
+    else:
+        chrome_options = ChromeOptions()
 
     if headless:
         chrome_options.add_argument("--headless")
