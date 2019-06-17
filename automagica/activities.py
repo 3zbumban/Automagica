@@ -497,11 +497,12 @@ def ChromeBrowser(ignore_images=False, headless=False, chrome_options=False):
     else:
         chromedriver_path = '\\bin\\mac64\\chromedriver.exe'
 
-
+    from selenium.webdriver import Chrome
+    
     if chrome_options:
         pass
     else:
-        from selenium.webdriver import Chrome, ChromeOptions
+        from selenium.webdriver import ChromeOptions
         chrome_options = ChromeOptions()
 
     if headless:
